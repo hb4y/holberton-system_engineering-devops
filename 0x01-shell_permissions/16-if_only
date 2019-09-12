@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ -n "$(find "hello" -user "guillaume" -print -prune -o -prune)" ]; then $(chmod betty hello); fi
+chown --from=guillaume betty hello
