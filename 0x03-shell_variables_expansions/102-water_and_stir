@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%o" $(echo $(( $(echo $((5#$(echo $(echo $WATER | tr water 01234)))))+$(echo $((5#$(echo $(echo $STIR | tr stir. 01234)))))))) | tr 01234567 behlnort
+echo $(printf "%o" $(echo $(( $(echo $((5#$(echo $(echo $WATER | tr water 01234)))))+$(echo $((5#$(echo $(echo $STIR | tr stir. 01234)))))))) | tr 01234567 behlnort)
