@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e aa "\n"a{b..z} "\n"{b..n}{a..z} "\n"o{a..n} "\n"o{p..z} "\n"{p..y}{a..z} "\n"z{a..y} "\n"zz
+printf "%s\n" {a..n}{a..z} o{a..n} o{p..z} {p..z}{a..z}
