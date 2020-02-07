@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# while case
 I=1
 while [ $I -lt 21 ]
 do
