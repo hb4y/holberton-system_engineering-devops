@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
+# until loop
 I=0
 until [ $I -gt 9 ]
 do
-	echo "Holberton"
+	echo "Holberton School"
 	((I++))
 done
