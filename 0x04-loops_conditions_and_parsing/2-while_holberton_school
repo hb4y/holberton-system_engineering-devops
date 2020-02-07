@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+I=0
+while [ $I -lt 10 ]; do
+	echo "Holberton"
+	let I=I+1
+done
