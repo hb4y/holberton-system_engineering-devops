@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-
+# for loop
 for i in {1..10}
 do
 	if [ "$i" -eq 9 ]
 	then
 		echo "Hi"
 	else
-		echo "Holberton"
+		echo "Holberton School"
 	fi
 done
