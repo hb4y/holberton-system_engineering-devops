@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# print username id path
+PASSWD="/etc/passwd"
+while read -r line
+do
+	echo "$line" | cut -d ":" -f1,3,6
+done < "$PASSWD"
