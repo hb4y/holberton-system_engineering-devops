@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 
+PASSWD="/etc/passwd"
+while IFS=: read -r USERNAME PASSWORD USERID GROUP_ID COMENT HOMEDIR CMDSHELL
+do
+	
+	echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOMEDIR and rides $CMDSHELL. $USERID's place is protected by the passcode $PASSWORD, more info about the user here: $COMENT"
+done < "$PASSWD"
