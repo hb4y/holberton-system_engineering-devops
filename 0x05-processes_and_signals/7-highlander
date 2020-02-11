@@ -1,1 +1,9 @@
 #!/usr/bin/env bash
+# inf loop
+I=1
+while [ $I ]
+do
+	trap "echo 'I am invincible!!!'" SIGTERM
+	echo "To infinity and beyond"
+	sleep 2
+done
