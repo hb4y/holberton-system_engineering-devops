@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# bash pid
+# shellcheck disable=SC2059
+ps -auxf | grep bash
