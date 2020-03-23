@@ -1,4 +1,5 @@
 # create a file in /tmp
+
 file {
     ensure  => file,
     mode    => '0744',
