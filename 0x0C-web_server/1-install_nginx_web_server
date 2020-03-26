@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+# isntall nginx
+
+apt update
+apt -y install nginx
+echo 'Holberton School' > /var/www/html/index.html
+ufw allow 'Nginx HTTP'
+service nginx start
