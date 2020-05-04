@@ -10,17 +10,18 @@ if __name__ == "__main__":
     api = "https://jsonplaceholder.typicode.com"
     user_id = sys.argv[1]
 
-    user_data = requests.get("{}/users/{}".format(api, user_id)).json()
-    user_todos = requests.get("{}/users/{}/todos".format(api, user_id)).json()
-    done_task = 0
-    total_task = len(user_todos)
-    tasks = []
+    if len(sys.argv) >= 2 and user_id.isdigit():
+        data = requests.get("{}/users/{}".format(api, user_id)).json()
+        todos = requests.get("{}/users/{}/todos".format(api, user_id)).json()
+        done = 0
+        total = len(todos)
+        tasks = []
 
-    for task in user_todos:
-        if task.get("completed") is True:
-            done_task += 1
-        tasks.append("\t " + task.get("title"))
+        for task in todos:
+            if task.get("completed") is True:
+                done += 1
+            tasks.append("\t " + task.get("title"))
 
-    print("Employee {} is done with tasks({}/{}):".format(
-            user_data.get("name"), done_task, total_task))
-    print('\n'.join(tasks))
+        print("Employee {} is done with tasks({}/{}):".format(
+               data.get("name"), done, total))
+        print('\n'.join(tasks))
