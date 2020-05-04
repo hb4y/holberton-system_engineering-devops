@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-comsume API
+comsume API from https://jsonplaceholder.typicode.com
 """
 import requests
 import sys
