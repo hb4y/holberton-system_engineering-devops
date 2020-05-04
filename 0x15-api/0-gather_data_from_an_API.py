@@ -20,7 +20,7 @@ if __name__ == "__main__":
         for task in todos:
             if task.get("completed") is True:
                 done += 1
-            tasks.append("\t " + task.get("title"))
+                tasks.append("\t " + task.get("title"))
 
         print("Employee {} is done with tasks({}/{}):".format(
                data.get("name"), done, total))
