@@ -7,10 +7,10 @@ import sys
 
 
 if __name__ == "__main__":
-    api = "https://jsonplaceholder.typicode.com"
-    user_id = sys.argv[1]
+    if len(sys.argv) >= 2 and argv[1].isdigit():
+        api = "https://jsonplaceholder.typicode.com"
+        user_id = sys.argv[1]
 
-    if len(sys.argv) >= 2 and user_id.isdigit():
         data = requests.get("{}/users/{}".format(api, user_id)).json()
         todos = requests.get("{}/users/{}/todos".format(api, user_id)).json()
         done = 0
