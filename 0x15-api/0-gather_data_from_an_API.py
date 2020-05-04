@@ -2,8 +2,8 @@
 """
 comsume API
 """
-import sys
 import requests
+import sys
 
 
 if __name__ == "__main__":
@@ -17,10 +17,10 @@ if __name__ == "__main__":
     tasks = []
 
     for task in user_todos:
-        if task["completed"] is True:
+        if task.get("completed") is True:
             done_task += 1
-        tasks.append("\t " + task["title"])
+        tasks.append("\t " + task.get("title"))
 
     print("Employee {} is done with tasks({}/{}):".format(
-            user_data["name"], done_task, total_task))
+            user_data.get("name"), done_task, total_task))
     print('\n'.join(tasks))
