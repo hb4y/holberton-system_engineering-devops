@@ -7,7 +7,7 @@ import sys
 
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 2 and argv[1].isdigit():
+    if len(sys.argv) >= 2 and sys.argv[1].isdigit():
         api = "https://jsonplaceholder.typicode.com"
         user_id = sys.argv[1]
 
