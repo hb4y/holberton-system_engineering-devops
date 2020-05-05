@@ -18,11 +18,12 @@ if __name__ == "__main__":
     for user in users:
         tasks = []
         for task in todos:
-            aux = {}
-            aux['task'] = task.get("title")
-            aux['completed'] = task.get("completed")
-            aux['username'] = user.get("username")
-            tasks.append(aux)
+            if user.get('id') == task.get('userId'):
+                aux = {}
+                aux['task'] = task.get("title")
+                aux['completed'] = task.get("completed")
+                aux['username'] = user.get("username")
+                tasks.append(aux)
         to_dict[user.get('id')] = tasks
 
     with open(file_name, mode='w') as employee_file:
