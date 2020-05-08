@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-import requests
 """
 get subs for a subreddit
 """
+
+
+import requests
 
 
 def number_of_subscribers(subreddit):
