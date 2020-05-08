@@ -13,5 +13,7 @@ def number_of_subscribers(subreddit):
     req = requests.get(api.format(subreddit), headers=head).json().get('data')
 
     if req:
-        return req.get('subscribers')
+        subs = req.get('subscribers')
+        if subs:
+            return subs
     return 0
