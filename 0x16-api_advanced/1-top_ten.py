@@ -18,7 +18,8 @@ def top_ten(subreddit):
     response = requests.get(api, headers=head)
 
     if not response:
-        return None
+        print(None)
+        return
 
     for i in range(10):
         dat = response.json().get('data') \
