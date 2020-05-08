@@ -13,11 +13,10 @@ def number_of_subscribers(subreddit):
 
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     head = {"User-Agent": user_agent}
-    req = requests.get(api, headers=head).json()
+    response = requests.get(api, headers=head)
 
-    dat = req.get('data')
+    dat = response.json().get('data')
     if dat:
         subs = dat.get('subscribers')
-        if subs:
-            return subs
+        return subs
     return 0
