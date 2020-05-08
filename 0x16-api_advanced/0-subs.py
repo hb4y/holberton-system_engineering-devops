@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import requests
 """
-get subs
+get subs for a subreddit
 """
 
 
